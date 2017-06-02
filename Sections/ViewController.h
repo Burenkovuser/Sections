@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate>
 
 @property(copy, nonatomic) NSDictionary *names;
 @property(copy, nonatomic) NSArray *keys;
