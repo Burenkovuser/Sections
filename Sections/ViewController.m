@@ -30,6 +30,8 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     UISearchBar *searshBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     tableView.tableHeaderView = searshBar;
     searchController = [[UISearchDisplayController alloc] initWithSearchBar:searshBar contentsController:self];
+    searchController.delegate = self;
+    searchController.searchResultsDataSource = self;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"sortednames" ofType:@"plist"];
     self.names = [NSDictionary dictionaryWithContentsOfFile:path];
